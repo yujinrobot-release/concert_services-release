@@ -1,0 +1,9 @@
+ros-indigo-concert-services (0.1.1-0saucy) saucy; urgency=high
+
+  * eclipse files and add to metapackage.
+  * rocon_service -> concert_service
+  * Contributors: Daniel Stonier
+
+ -- Daniel Stonier <d.stonier@gmail.com>  Mon, 25 Aug 2014 15:00:00 -0000
+
+
