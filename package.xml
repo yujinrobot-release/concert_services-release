@@ -1,6 +1,6 @@
 <package>
   <name>concert_service_gazebo</name>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
   <description>
       Sets up the gazebo robot manager as a service to assist in spawning/killing robots as concert clients.
   </description>
@@ -18,10 +18,21 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <run_depend>gateway_msgs</run_depend>
+  <run_depend>rocon_std_msgs</run_depend>
   <run_depend>rocon_console</run_depend>
   <run_depend>rocon_gateway_utils</run_depend>
   <run_depend>rocon_launch</run_depend>
   <run_depend>rocon_python_utils</run_depend>
   <run_depend>rospy</run_depend>
+  <run_depend>roslib</run_depend>
+
+  <export>
+    <concert_service>services/gazebo_robot_world/gazebo_robot_world.service</concert_service>
+
+    <concert_gazebo>robots/kobuki/kobuki.concert_gazebo</concert_gazebo>
+    <concert_gazebo>robots/turtlebot/turtlebot.concert_gazebo</concert_gazebo>
+    <!-- Segbot example -->
+    <!--<concert_gazebo>robots/segbot/segbot.concert_gazebo</concert_gazebo>-->
+  </export>
 
 </package>
