@@ -2,6 +2,9 @@
 Changelog for package concert_service_turtlesim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.2 (2014-11-21)
+------------------
+
 0.1.1 (2014-08-26)
 ------------------
 * hatchling no longer installable.
