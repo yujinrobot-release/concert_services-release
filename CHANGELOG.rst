@@ -2,6 +2,12 @@
 Changelog for package concert_service_teleop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.4 (2014-11-21)
+------------------
+
+0.1.3 (2014-11-21)
+------------------
+
 0.1.2 (2014-11-21)
 ------------------
 * teleop_pimp now inherits from resource_pimp in concert_service_utilities
