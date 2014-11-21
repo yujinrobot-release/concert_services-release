@@ -1,0 +1,12 @@
+Source: ros-indigo-concert-service-initialisation
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonlee.in@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://ros.org/wiki/concert_service_initialisation
+Standards-Version: 3.9.2
+
+Package: ros-indigo-concert-service-initialisation
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-concert-msgs, ros-indigo-concert-scheduler-requests, ros-indigo-concert-service-msgs, ros-indigo-concert-service-utilities, ros-indigo-rocon-python-comms, ros-indigo-rocon-std-msgs, ros-indigo-rocon-uri, ros-indigo-rospy, ros-indigo-scheduler-msgs, ros-indigo-unique-id
+Description: Services to initilise environment. Make a map and annotation
