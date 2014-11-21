@@ -1,6 +1,6 @@
 <package>
   <name>concert_service_teleop</name>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
   <description>
       Teleop by request from a rocon interactive program.
   </description>
@@ -20,6 +20,7 @@
   <run_depend>rocon_python_comms</run_depend>
   <run_depend>concert_service_msgs</run_depend>
   <run_depend>rocon_std_msgs</run_depend>
+  <run_depend>rocon_uri</run_depend>
   <run_depend>scheduler_msgs</run_depend>
   <run_depend>unique_id</run_depend>
 
