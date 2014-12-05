@@ -2,6 +2,11 @@
 Changelog for package concert_service_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.5 (2014-12-05)
+------------------
+* rename gazebo service
+* Contributors: Jihoon Lee
+
 0.1.4 (2014-11-21)
 ------------------
 
