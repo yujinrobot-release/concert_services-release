@@ -2,6 +2,9 @@
 Changelog for package concert_service_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.9 (2015-03-23)
+------------------
+
 0.1.8 (2015-02-27)
 ------------------
 * Update link to example in README
