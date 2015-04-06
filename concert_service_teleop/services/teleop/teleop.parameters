@@ -1,5 +1,0 @@
-# Default parameter for teleop service
-allocation_timeout: 15.0
-enable_web_video: false
-web_video_server_address: localhost
-web_video_server_port: 8080
