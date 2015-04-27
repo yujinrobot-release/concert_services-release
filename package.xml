@@ -1,6 +1,6 @@
 <package>
   <name>concert_service_indoor_2d_map_prep</name>
-  <version>0.1.10</version>
+  <version>0.1.11</version>
   <description>
       Services to initilise indoor 2d map environment. Make a map and annotation
   </description>
@@ -16,6 +16,7 @@
   <run_depend>rospy</run_depend>
   <run_depend>concert_msgs</run_depend>
   <run_depend>concert_scheduler_requests</run_depend>
+  <run_depend>concert_software_farmer</run_depend>
   <run_depend>concert_service_utilities</run_depend>
   <run_depend>rocon_python_comms</run_depend>
   <run_depend>concert_service_msgs</run_depend>
