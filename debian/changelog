@@ -1,0 +1,91 @@
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.11-0trusty) trusty; urgency=high
+
+  * pass service name as param
+  * it errors if service param does not exist
+  * utilise software farm to use world canvas closes #38 <https://github.com/robotics-in-concert/concert_services/issues/38>
+  * control interaction params with service param closes #45 <https://github.com/robotics-in-concert/concert_services/issues/45>
+  * Contributors: Jihoon Lee
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 26 Apr 2015 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.10-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 05 Apr 2015 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.9-0trusty) trusty; urgency=high
+
+  * fix service name
+  * Merge branch 'indigo' of https://github.com/robotics-in-concert/concert_services into indigo
+  * add concert_software_common dependency closes #42 <https://github.com/robotics-in-concert/concert_services/issues/42>
+  * Contributors: Jihoon Lee
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 22 Mar 2015 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.8-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Thu, 26 Feb 2015 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.7-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 08 Feb 2015 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.6-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 04 Jan 2015 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.5-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Thu, 04 Dec 2014 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.4-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Thu, 20 Nov 2014 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.3-0trusty) trusty; urgency=high
+
+  * update service launcher
+  * rename initialisation to indoor_2d_map_prep
+  * Contributors: Jihoon Lee
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Thu, 20 Nov 2014 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.2-0trusty) trusty; urgency=high
+
+  * add rocon_admin_app in admin service
+  * updates
+  * remove paramter for map annotation
+  * remove wc namespace from pimp
+  * now wc namespace is interaction parameter
+  * add map annotation
+  * rename concert_service_make_a_map to concert_service_initialisation. add map annotation service
+  * Contributors: Jihoon Lee
+  * add rocon_admin_app in admin service
+  * updates
+  * remove paramter for map annotation
+  * remove wc namespace from pimp
+  * now wc namespace is interaction parameter
+  * add map annotation
+  * rename concert_service_make_a_map to concert_service_initialisation. add map annotation service
+  * Contributors: Jihoon Lee
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Thu, 20 Nov 2014 15:00:00 -0000
+
+ros-indigo-concert-service-indoor-2d-map-prep (0.1.1-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Mon, 25 Aug 2014 15:00:00 -0000
+
+
