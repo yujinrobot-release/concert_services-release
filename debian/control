@@ -1,0 +1,12 @@
+Source: ros-indigo-concert-services
+Section: misc
+Priority: extra
+Maintainer: Daniel Stonier <d.stonier@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://www.ros.org/wiki/concert_services
+Standards-Version: 3.9.2
+
+Package: ros-indigo-concert-services
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-concert-service-admin, ros-indigo-concert-service-gazebo, ros-indigo-concert-service-image-stream, ros-indigo-concert-service-indoor-2d-map-prep, ros-indigo-concert-service-teleop, ros-indigo-concert-service-turtlesim, ros-indigo-concert-service-waypoint-navigation
+Description: Officially supported rocon services for the concert framework.
