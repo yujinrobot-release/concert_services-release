@@ -28,36 +28,32 @@ import concert_service_msgs.msg as concert_service_msgs
 
 from concert_software_farmer import SoftwareFarmClient, FailedToStartSoftwareException
 
-class MakeAMapPimp(concert_service_utilities.ResourcePimp):
-
-    _default_cmd_vel_topic = '/teleop/cmd_vel'
-    _default_compressed_image_topic = '/teleop/compressed_image'
-    _default_map_topic = 'map'
-    _default_scan_topic = '/make_a_map/scan'
-    _default_robot_pose_topic = 'robot_pose'
-    _default_wc_namespace = 'world_canvas'
+class WaypointNavPimp(concert_service_utilities.ResourcePimp):
 
     def setup_variables(self):
         '''
             Need to setup the following variables
             service_priority, service_id, resource_type, available_resource_publisher_name, capture_topic_name
         '''
-        (service_name, service_description, service_priority, service_id) = concert_service_utilities.get_service_info()
+        (service_name, service_description, service_priority, service_id) = concert_service_utilities.get_service_info()       
         self.service_priority = service_priority
         self.service_id = service_id
-        self.resource_type = 'rocon_apps/make_a_map'
-        self.available_resource_publisher_name = 'available_make_a_map'
-        self.capture_topic_name = 'capture_make_a_map'
+        self.resource_type = 'rocon_apps/waypoint_nav'
+        self.available_resource_publisher_name = 'available_waypoint_nav'
+        self.capture_topic_name = 'capture_waypoint_nav'
+
+        # it should be rapp's public interface
+        self._default_map_topic = 'map' 
+        self._default_waypoints_topic = 'waypoints'
 
     def ros_capture_callback(self, request_id, msg):
         '''
-         Processes the service pair server 'capture_teleop'. This will run
+         Processes the service pair server 'capture_waypiont_nav'. This will run
          in a thread of its own for each request. It has a significantly long lock
          though - this needs to get fixed.
         '''
         # Todo : request the scheduler for this resource,
         # use self.allocation_timeout to fail gracefully
-
         response = concert_service_msgs.CaptureResourceResponse()
         response.result = False
         if not msg.release:  # i.e. we're capturing:
@@ -84,57 +80,38 @@ class MakeAMapPimp(concert_service_utilities.ResourcePimp):
         resource.id = unique_id.toMsg(unique_id.fromRandom())
         resource.rapp = self.resource_type
         resource.uri = uri
-        cmd_vel_remapped, compressed_image_topic_remapped, map_remapped, scan_remapped, robot_pose_remapped = self._get_remapped_topic(rocon_uri.parse(resource.uri).name.string)
-        resource.remappings = [rocon_std_msgs.Remapping(self._default_cmd_vel_topic, cmd_vel_remapped), rocon_std_msgs.Remapping(self._default_compressed_image_topic, compressed_image_topic_remapped), rocon_std_msgs.Remapping(self._default_map_topic, map_remapped), rocon_std_msgs.Remapping(self._default_scan_topic, scan_remapped), rocon_std_msgs.Remapping(self._default_robot_pose_topic, robot_pose_remapped)]
+        resource.remappings = []
+        map_remapped, waypoints_remapped  = self._get_remapped_topic(rocon_uri.parse(resource.uri).name.string)
+        resource.remappings = [rocon_std_msgs.Remapping(self._default_map_topic, map_remapped), rocon_std_msgs.Remapping(self._default_waypoints_topic, waypoints_remapped)]
         return resource
 
     def _get_remapped_topic(self, name):
         '''
           Sets up remapping rules for Rapp configuration
         '''
-        cmd_vel_remapped = '/' + name + self._default_cmd_vel_topic
-        compressed_image_topic_remapped = '/' + name + self._default_compressed_image_topic
-        map_remapped = '/' + name + '/' +  self._default_map_topic
-        scan_remapped = '/' + name + self._default_scan_topic
-        robot_pose_remapped = '/' + name + '/' + self._default_robot_pose_topic
+        map_remapped = rospy.resolve_name(rospy.get_param('map_topic'))
+        waypoints_remapped = rospy.resolve_name(rospy.get_param('waypoints_topic'))
 
-        return cmd_vel_remapped, compressed_image_topic_remapped,map_remapped, scan_remapped, robot_pose_remapped
+        return map_remapped, waypoints_remapped
 
     def loginfo(self, msg):
-        rospy.loginfo("MakeAMapPimp : %s"%str(msg))
+        rospy.loginfo("WaypointNavPimp : %s"%str(msg))
 
     def logwarn(self, msg):
-        rospy.logwarn("MakeAMapPimp : %s"%str(msg))
+        rospy.logwarn("WaypointNavPimp : %s"%str(msg))
 
     def logerr(self, msg):
-        rospy.logerr("MakeAMapPimp : %s"%str(msg))
-
+        rospy.logerr("WaypointNavPimp : %s"%str(msg))
 
 ##############################################################################
 # Launch point
 ##############################################################################
 
-WORLD_CANVAS_SERVER='concert_software_common/world_canvas_server'
-
 if __name__ == '__main__':
-    rospy.init_node('make_a_map_pimp')
-    pimp = MakeAMapPimp()
+    rospy.init_node('waypoint_nav_pimp')
 
-    try:
-        wc_namespace_param_name = rospy.get_param('wc_namespace_param')
-
-        sfc = SoftwareFarmClient()
-        success, namespace, parameters = sfc.allocate(WORLD_CANVAS_SERVER)
-
-        if not success:
-            raise FailedToStartSoftwareException("Failed to allocate software")
-        rospy.set_param(wc_namespace_param_name, namespace)
-        rospy.loginfo("MakeAMap Pimp : World Canvas Server - %s"%namespace)
-        rospy.loginfo("Done")
-        rospy.spin()
-    except FailedToStartSoftwareException as e:
-        rospy.logerr("MakeAMap Pimp : %s"%str(e))
-    except KeyError as e:
-        rospy.logerr("MakeAMapPimp : Key error %s"%e)
-    if not rospy.is_shutdown():
-        pimp.cancel_all_requests()
+    pimp = WaypointNavPimp()
+    rospy.on_shutdown(pimp.cancel_all_requests)
+    pimp.loginfo("Initialised")
+    rospy.spin()
+    pimp.loginfo("Bye Bye")
