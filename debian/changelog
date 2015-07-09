@@ -1,0 +1,81 @@
+ros-indigo-concert-service-image-stream (0.1.12-0trusty) trusty; urgency=high
+
+  * add imagestrea service in meta pkg
+  * image stream service
+  * update launcher and intreactions
+  * create image stream service
+  * Contributors: Jihoon Lee
+  * image stream service
+  * update launcher and intreactions
+  * create image stream service
+  * Contributors: Jihoon Lee
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Wed, 08 Jul 2015 15:00:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.11-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 26 Apr 2015 15:00:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.10-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 05 Apr 2015 15:00:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.9-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 22 Mar 2015 15:00:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.8-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Thu, 26 Feb 2015 15:00:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.7-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 08 Feb 2015 15:00:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.6-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Sun, 04 Jan 2015 15:00:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.5-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Thu, 04 Dec 2014 15:00:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.4-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Fri, 21 Nov 2014 08:36:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.3-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Fri, 21 Nov 2014 08:31:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.2-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Fri, 21 Nov 2014 08:09:00 -0000
+
+ros-indigo-concert-service-image-stream (0.1.1-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonlee.in@gmail.com>  Mon, 25 Aug 2014 15:00:00 -0000
+
+
