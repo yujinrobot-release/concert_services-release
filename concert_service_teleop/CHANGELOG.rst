@@ -2,6 +2,9 @@
 Changelog for package concert_service_teleop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.12 (2015-07-09)
+-------------------
+
 0.1.11 (2015-04-27)
 -------------------
 * pass service name as param
