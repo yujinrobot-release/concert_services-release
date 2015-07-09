@@ -1,3 +1,32 @@
+## concert_services (indigo) - 0.1.12-0
+
+The packages in the `concert_services` repository were released into the `indigo` distro by running `/usr/bin/bloom-release concert_services -t indigo -r indigo` on `Thu, 09 Jul 2015 06:06:42 -0000`
+
+These packages were released:
+- `concert_service_admin`
+- `concert_service_gazebo`
+- `concert_service_image_stream`
+- `concert_service_indoor_2d_map_prep`
+- `concert_service_teleop`
+- `concert_service_turtlesim`
+- `concert_service_waypoint_navigation`
+- `concert_services`
+
+Version of package(s) in repository `concert_services`:
+- upstream repository: https://github.com/robotics-in-concert/concert_services.git
+- release repository: https://github.com/yujinrobot-release/concert_services-release.git
+- rosdistro version: `0.1.11-0`
+- old version: `0.1.11-0`
+- new version: `0.1.12-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.8`
+- rosdep version: `0.11.2`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.36`
+
+
 ## concert_services (indigo) - 0.1.11-0
 
 The packages in the `concert_services` repository were released into the `indigo` distro by running `/usr/bin/bloom-release concert_services -t indigo -r indigo` on `Mon, 27 Apr 2015 06:01:49 -0000`
