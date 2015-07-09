@@ -2,6 +2,11 @@
 Changelog for package concert_services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.12 (2015-07-09)
+-------------------
+* add imagestrea service in meta pkg
+* Contributors: Jihoon Lee
+
 0.1.11 (2015-04-27)
 -------------------
 
