@@ -1,0 +1,12 @@
+Source: ros-indigo-concert-service-turtlesim
+Section: misc
+Priority: extra
+Maintainer: Daniel Stonier <d.stonier@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://ros.org/wiki/concert_service_turtlesim
+Standards-Version: 3.9.2
+
+Package: ros-indigo-concert-service-turtlesim
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-concert-service-msgs, ros-indigo-concert-service-utilities, ros-indigo-gateway-msgs, ros-indigo-rocon-app-manager-msgs, ros-indigo-rocon-console, ros-indigo-rocon-gateway-utils, ros-indigo-rocon-launch, ros-indigo-rocon-python-comms, ros-indigo-rocon-python-utils, ros-indigo-rocon-std-msgs, ros-indigo-rospy, ros-indigo-std-msgs, ros-indigo-turtlesim
+Description: Sets up the turtlesim engine as a service to assist in spawning/killing turtle concert clients.
